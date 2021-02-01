@@ -1,0 +1,235 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+}
+
+/* <!-- header --> */
+
+.header {
+    position: relative;                /* <!-- Надвинули нашу секцию promo на subheader --> */
+    height: 50px;             /* Мы свойством position: fixed вывели наш элемент из блока header и т.к. у него не ыл задан параметр высоты, он сжался, и у нас ушел отступ у текста. */
+    /* position: sticky;                  <!-- Сделал плавающее меню --> */ 
+    /* top: 0px;                          <!-- Указал отступ этого меню --> */
+    /* z-index: 1;                       <!-- Указал приоритетность в показе этого меню, в момент прокрутки --> */
+} 
+
+.header_nav {    
+    min-height: 50px;
+    background-color: #212121;
+    position: fixed;                     /*<!-- Сделал плавающее меню --> */
+    width: 100%;                         /*<!-- Указал, его ширину, так как он вышел из родителя, с исходной шириной --> */
+    z-index: 1;                          /*<!-- Указал его приоритетност в показе, в момент скролла --> */
+}
+
+.menu {
+    padding: 13px 70px 13px;
+    margin: 0px;                      /* <!-- Используя Bootstrap, неоходимо обнулять margin, он идет с отступом вниз по умолчанию --> */
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;            /* <!-- Убираем маркеры у списка, важно указать именно у элемента ul --> */  
+}
+
+.menu .menu_item {
+    border-right: 2px dotted black;    /* <!-- Создаем границу справа от наших ссылок --> */
+}
+
+.menu .menu_link {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 300;  
+    text-decoration-line: none;
+    margin-right: 28px;                  /* <!-- Создаем отступ границы от наших ссылок --> */
+}
+
+/* <!-- subheader --> */
+
+.subheader { 
+    position: absolute;                     /* <!-- Надвинули нашу секцию promo на subheader --> */
+    top: 50px;                              /*<!-- Сдвинул ниже на высоту блока навигации, чтобы подменю не наезжало на навигацию, --> */
+    width: 100%;                            /* <!-- Надвинули нашу секцию promo на subheader --> */
+    margin: 0 auto;
+    height: 84px;
+    background-color: rgba(0, 0, 0, .6);       /* <!-- Задали прозрачность через альфа канал --> */   
+}
+
+.subheader .logo_name {
+    margin-top: 6px;
+    opacity: 0.5;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 100;
+    text-align: left;
+}
+
+.subheader .subheader_logo {
+    display: block;
+    margin-top: 16px;
+    max-width: 100%;               /* <!--Прописали на будущее, если лого поменяется, ео ширина составит максимум 100% от ширины моей колонки --> */  
+}
+
+.subheader .subheader_text {
+    margin-top: 18px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 300;
+    text-align: right;                     /* <!-- Выравнили наш текст с правого края --> */ 
+}
+
+.subheader .subheader_tel .tel {
+    display: block;
+    margin-top: 8px;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: right;                   /* <!-- Выравнили наш текст с правого края --> */    
+    line-height: 12px;                   /* <!-- Если наш элемент занимает пространства больше, чем контент в нем, то уменьшаем его с помощью этого свойства --> */
+    text-decoration-line: none;
+}
+
+.subheader .subheader_btn, .promo .promo_btn {
+    margin-top: 19px;
+    width: 172px;
+    height: 46px;
+    box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.12);
+    border: none;                         /* <!-- Убрали границы у кнопки --> */  
+    border-radius: 4px;                   /* <!-- Закруглили нашей кнопке края --> */  
+    background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.promo .promo_btn {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 118px;
+}
+
+/* <!-- promo --> */
+
+.promo {
+    /* position: absolute;                                                    <!-- Надвинули нашу секцию promo на subheader 2 способом -->      */
+    width: 100%;                                                           /* <!-- Надвинули нашу секцию promo на subheader 2 способом --> */ 
+    padding: 151px 0px 135px 0px;
+    background: url(../img/background/bg_promo.jpg) center center/cover no-repeat;
+    /* transform: translateY(-84px);                                          <!-- Надвинули нашу секцию promo на subheader 2 способом -->  */
+    /* z-index: -1;                                                           <!-- Надвинули нашу секцию promo на subheader 2 способом -->  */
+}
+
+.promo .promo_title {
+    margin: 0px;
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 44px;
+    
+}
+
+.promo .promo_subtitle {
+    margin: 0px;
+    margin-top: 22px;
+    line-height: 28px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    font-size: 36px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.promo .promo_text {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    max-width: 955px;
+    margin: 0 auto;
+    margin-top: 23px;
+}
+
+
+/* <!-- subheader --> */
+.reasons {
+    min-height: 900px;
+    padding: 71px 0 65px 0;
+}
+
+
+.reasons .reasons_box {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 112px;
+    height: 24px;
+    background-color: #000000
+}
+
+.reasons .reasons_header {
+    color: #ffffff;
+    font-size: 11px;
+    line-height: 7px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.reasons .reasons_title {
+    margin: 0px;
+    margin-top: 38px;
+    margin-bottom: 5px;
+    color: #222222;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 33px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.reasons .reasons_bg {
+    width: 113px;
+    height: 113px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1eacc7;
+    border-radius: 100%;
+}
+
+.reasons .reasons_subheader {
+    margin: 0px;    
+    color: #1eacc7;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.reasons .reasons_text {
+    margin: 0px;
+    margin-top: 4px;
+    width: 341px;
+    color: #202020;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 21px;
+    text-align: justify;
+}
+
+.reasons_block {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 35px;
+}
